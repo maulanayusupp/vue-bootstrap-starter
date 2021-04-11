@@ -10,7 +10,7 @@
 						<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" v-model="email">
 					</div>
 
-					<button type="submit" class="btn btn-danger btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Reset Password') }}</button>
+					<button type="submit" class="btn btn-primary btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Reset Password') }}</button>
 
 					<div class="mt-2">
 						{{ $t("Already have an account") }}? <router-link to="/login">{{ $t('Sign in') }}</router-link>

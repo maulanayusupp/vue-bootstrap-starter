@@ -6,6 +6,7 @@
 }
 
 .form-control {
+	border-radius: .5rem;
 	&:focus,
 	&.is-focus {
 		color: black;

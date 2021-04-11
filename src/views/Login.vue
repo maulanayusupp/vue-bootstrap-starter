@@ -23,7 +23,7 @@
 							<input-password v-model="password"/>
 						</div>
 
-						<button type="submit" class="btn btn-danger btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Sign in') }}</button>
+						<button type="submit" class="btn btn-primary btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Sign in') }}</button>
 
 						<div class="text-center mt-2">
 							{{ $t("Don't have an account") }}? <router-link to="/register">{{ $t('Join Now') }}</router-link>

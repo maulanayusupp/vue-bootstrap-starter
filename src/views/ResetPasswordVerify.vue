@@ -15,7 +15,7 @@
 						<input type="password" class="form-control" id="inputNewPassword" autocomplete="false" v-model="confirmPassword">
 					</div>
 
-					<button type="submit" class="btn btn-danger btn-block" :class="{ 'is-loading': isSubmitting }">{{ $t('Submit') }}</button>
+					<button type="submit" class="btn btn-primary btn-block" :class="{ 'is-loading': isSubmitting }">{{ $t('Submit') }}</button>
 
 					<div class="mt-2">
 						<router-link to="/login">{{ $t('Back to login') }}</router-link>

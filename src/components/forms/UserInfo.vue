@@ -49,7 +49,7 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-danger btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Continue') }}</button>
+		<button type="submit" class="btn btn-primary btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Continue') }}</button>
 	</form>
 </div>
 </template>

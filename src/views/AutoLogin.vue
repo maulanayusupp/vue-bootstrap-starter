@@ -9,7 +9,7 @@
 						<label for="inputEmail">{{ $t('Email address') }}</label>
 						<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" v-model="email">
 					</div>
-					<button type="submit" class="btn btn-danger btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Give me a magic') }}</button>
+					<button type="submit" class="btn btn-primary btn-block" :class="{ 'is-loading': isSubmitting}">{{ $t('Give me a magic') }}</button>
 
 					<div class="mt-2">
 						<router-link to="/login">{{ $t('Back to login') }}</router-link>

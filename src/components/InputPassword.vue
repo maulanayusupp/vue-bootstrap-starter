@@ -10,7 +10,7 @@
 			:value="value"
 			@input="input">
 		<div
-			class="cursor-pointer material-icons-password text-danger pl-2 pr-2 pt-1"
+			class="cursor-pointer material-icons-password text-secondary pl-2 pr-2 pt-2"
 			@click="toggleInputType">
 			{{ icon }}
 		</div>
