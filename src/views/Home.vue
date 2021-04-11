@@ -141,11 +141,13 @@
 
 			<!-- Graph -->
 			<div class="row mt-4">
-				<div class="col-lg-6 mb-lg-0 mb-4">
+				<!-- Stats -->
+				<div class="col-lg-5 mb-lg-0 mb-4">
 					<div class="card">
 						<div class="card-body p-3">
 							<h6 class="ms-2 mb-0 text-bold pt-2"> Active Users </h6>
 							<p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
+							<p class="text-sm ms-2"> Statistics by average daily users</p>
 							<div class="container border-radius-lg">
 								<div class="row">
 								<div class="col-3 py-3 ps-0">
@@ -252,6 +254,41 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Timeline -->
+				<div class="col-lg-7 col-md-6">
+					<div class="card h-100">
+						<div class="card-header pb-0">
+						<h6>Orders overview</h6>
+						<p class="text-sm">
+							<i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+							<span class="font-weight-bold">24%</span> this month
+						</p>
+						</div>
+						<div class="card-body p-3">
+							<div class="timeline timeline-one-side">
+								<div class="timeline-block mb-3">
+									<span class="timeline-step">
+										<i class="material-icons text-success">more_vert</i>
+									</span>
+									<div class="timeline-content">
+										<h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
+										<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+									</div>
+								</div>
+								<div class="timeline-block mb-3">
+									<span class="timeline-step">
+										<i class="material-icons text-success">more_vert</i>
+									</span>
+									<div class="timeline-content">
+										<h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
+										<p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
 			</div>
 		</div>
 
