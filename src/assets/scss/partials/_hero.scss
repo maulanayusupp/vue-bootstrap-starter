@@ -1,0 +1,22 @@
+.hero {
+	height: 450px;
+	padding: 3em;
+	background-color: #87161f;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	.hero-body {
+		max-width: 768px;
+		margin: 110px auto 0 auto;
+	}
+}
+
+.mini-hero-default {
+	background-color: #9a2629;
+    color: #fff;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}

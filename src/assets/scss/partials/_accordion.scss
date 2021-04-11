@@ -1,0 +1,44 @@
+.vsa-list {
+	--vsa-max-width: 720px;
+	--vsa-min-width: 300px;
+	--vsa-text-color: rgba(55, 55, 55, 1);
+	--vsa-highlight-color: rgb(207 4 4);
+	--vsa-bg-color: rgba(255, 255, 255, 1);
+	--vsa-border-color: rgba(0, 0, 0, 0.2);
+	--vsa-border-width: 1px;
+	--vsa-border-style: solid;
+	--vsa-heading-padding: 1rem 1rem;
+	--vsa-content-padding: 2rem 2rem;
+	--vsa-default-icon-size: .5;
+}
+
+.new-accordion-item {
+	text-align: left;
+	.new-accordion-item-header {
+		padding: 1em 1.2em;
+		line-height: 1.5;
+		border: 1px solid #d1d1d1;
+		&.active,
+		&:hover {
+			background-color: #CF0403;
+			i,
+			.accordion-header-title {
+				color: #FFF;
+			}
+		}
+	}
+	.new-accordion-item-content {
+		padding: 1.7em 1.2em;
+		border-left: 1px solid #d1d1d1;
+		border-right: 1px solid #d1d1d1;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	.accordion-header-title {
+		font-size: 1.2em;
+	}
+	&:not(:last-child) {
+		.new-accordion-item-header {
+			border-bottom: 0;
+		}
+	}
+}

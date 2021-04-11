@@ -1,0 +1,94 @@
+.card-member {
+	position: relative;
+	.card-member-info {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		color: #fff;
+		padding: 10px;
+		border-radius: 0px 0px 6px 6px;
+		background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+	}
+	.card-member-icon-camera {
+		position: relative;
+		top: 3px;
+	}
+	.card-member-sub-info {
+		color: #d1d1d1;
+	}
+}
+
+.card-member-image {
+	max-height: 320px;
+	min-height: 320px;
+	background-color: lightgrey;
+    background-position: center top;
+	background-size: cover;
+	border-radius: 5px;
+
+	&.card-member-details {
+		max-height: 180px;
+		min-height: 180px;
+		min-width: 145px;
+
+		@media only screen and (max-width: 768px) {
+			max-height: 170px;
+			min-height: 170px;
+			min-width: 100px;
+		}
+	}
+
+	&.profile-avatar-details {
+		max-height: 350px;
+		min-height: 350px;
+		@media only screen and (max-width: 768px) {
+			max-height: 500px;
+			min-height: 500px;
+		}
+	}
+
+	&.message-avatar {
+		min-height: 100px;
+		max-height: 100px;
+		min-width: 100px;
+		max-width: 100px;
+	}
+}
+
+.photo-thumbnail {
+	max-height: 220px;
+	min-height: 220px;
+	background-color: lightgrey;
+	background-position: center top;
+	background-size: cover;
+	border-radius: 5px;
+	.icon-photo-locked {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 3px;
+		border-radius: 10px;
+		background-color: #fff;
+		font-size: 16px;
+	}
+}
+.photo-locked-thumbnail {
+	max-height: 220px;
+	min-height: 220px;
+	background-color: #f7f7f7;
+	background-position: center top;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+.member-card-details {
+	margin-top: 1em;
+    padding-bottom: 1em;
+	border-bottom: 1px solid #d1d1d1;
+	&:hover {
+		opacity: .8;
+	}
+	.member-image {
+		max-width: 150px;
+	}
+}

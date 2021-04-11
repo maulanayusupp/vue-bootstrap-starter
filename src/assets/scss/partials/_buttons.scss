@@ -1,0 +1,254 @@
+.btn {
+	margin-bottom: 1rem;
+    letter-spacing: -.025rem;
+    text-transform: uppercase;
+    // box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+    background-size: 150%;
+    background-position-x: 25%;
+	display: inline-block;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .75rem 1.5rem;
+    font-size: .75rem;
+    border-radius: .5rem;
+    transition: all .15s ease-in;
+	min-height: 36px;
+	border: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		transform: scale(.96);
+	}
+
+	&:not(.btn-icon) {
+		padding: 6px 20px;
+	}
+
+	&:disabled,
+	&.disabled {
+		cursor: default;
+		color: #C4C4C4 !important;
+		background-color: #595959 !important;
+	}
+
+	@include media-breakpoint-up(sm) {
+		// padding: .5rem .75rem;
+	}
+
+	&:hover {
+		text-decoration: none !important;
+	}
+
+	span,
+	.material-icons {
+		vertical-align: middle;
+
+		&:not(:only-child) {
+			margin-right: .5rem;
+		}
+	}
+
+	span {
+		&:first-child:not(:only-child) {
+			margin-left: .5rem;
+		}
+	}
+
+	i {
+		font-size: larger;
+	}
+	.material-icons {
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&-more {
+		width: 20px;
+		min-width: 20px;
+	}
+
+	&-fluid {
+		min-width: 20px;
+	}
+
+	&-short {
+		padding-top: .35rem;
+		padding-bottom: .35rem;
+	}
+
+	&.btn-danger {
+		background-color: #CF0403;
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+
+.btn-circle {
+	padding: 0;
+	line-height: 1;
+	border: 0;
+	border-radius: 50%;
+
+	i {
+		display: block;
+	}
+}
+
+.btn-default {
+	color: #E6E6E6;
+	background-color: $btn-default-bg;
+
+	&:hover {
+		color: $btn-primary-color;
+		background-color: #2C2C2C;
+	}
+
+	&:active {
+		color: $btn-primary-color;
+		background-color: $color-primary;
+	}
+}
+
+.btn-icon-action {
+	color: grey;
+	background-color: transparent;
+
+	&:hover {
+		color: white;
+		background-color: lighten($btn-primary-bg, 10%);
+	}
+
+	&:active {
+		color: $btn-primary-color;
+		background-color: $color-primary;
+	}
+}
+
+.btn-boxed {
+	border-radius: 3px;
+}
+
+.btn-even {
+	min-width: 100px;
+}
+
+.btn-fading {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: inherit !important;
+	background-color: rgba(0, 0, 0, 0.49);
+	// text-transform: uppercase;
+	text-decoration: none !important;
+}
+
+.btn-primary {
+	color: $btn-primary-color;
+	background-color: $btn-primary-bg;
+	outline: 0;
+
+	&:not(:disabled):not(.disabled) {
+		&:hover,
+		&:active,
+		&:focus {
+			color: $btn-primary-color;
+			background-color: lighten(#7928ca, 10%);
+		}
+	}
+
+	&:not(:disabled):not(.disabled) {
+		&:active {
+			color: #fff;
+			background-color: $btn-primary-bg;
+		}
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #C4C4C4;
+		background-color: darken($btn-primary-bg, 10%);
+	}
+}
+
+.btn-plain {
+	border-radius: 0;
+}
+
+.btn-default,
+.btn-secondary {
+	background-image: linear-gradient(310deg,#627594,#a8b8d8);
+}
+.btn-primary {
+	background-image: linear-gradient(310deg,#7928ca,#ff0080);
+}
+.btn-danger {
+	background-image: linear-gradient(310deg,#ea0606,#ff667c);
+}
+.btn-info {
+	background-image: linear-gradient(310deg,#2152ff,#21d4fd);
+}
+.btn-warning {
+	background-image: linear-gradient(310deg,#f53939,#fbcf33);
+}
+.btn-success {
+	background-image: linear-gradient(310deg,#17ad37,#98ec2d);
+}
+.btn-limit {
+	color: #212529;
+}
+
+.btn-filter-verified {
+	background: #2C96FF;
+	color: black;
+	max-width: 100%!important;
+	min-width: 75px!important;
+	min-height: 32.5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.btn-filter-role {
+	background: #2C96FF;
+	color: black;
+	max-width: 100%!important;
+	min-width: 92px!important;
+	min-height: 32.5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.verified-icon-left{
+	color: black;
+	max-width: 100%!important;
+	min-width: 30px!important;
+	min-height: 32.5px;
+	border: 1px solid #595959;
+	position: relative;
+}
+
+.btn-close-picker {
+	min-width: 225px;
+}
+
+.btn-outline {
+	background-color: #fff;
+	&.border-red {
+		border: 2px solid #CF0403;
+	}
+	&:hover {
+		background-color: #CF0403;
+		&.border-red {
+			border: 2px solid #CF0403;
+			color: #fff;
+		}
+	}
+}

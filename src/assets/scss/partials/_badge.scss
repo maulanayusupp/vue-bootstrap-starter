@@ -1,0 +1,45 @@
+.premium-badge {
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	padding: 3px 10px;
+	font-size: 11px;
+	border-radius: 25px;
+	background-color: #ECA00E;
+	font-weight: bold;
+	text-transform: uppercase;
+	&.relative {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	&.badge-small {
+		font-size: 9px;
+		padding: 2px 7px;
+	}
+}
+
+.diamond-badge {
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	padding: 3px 10px;
+	font-size: 11px;
+	border-radius: 25px;
+	background-color: rgb(54, 169, 236);
+	font-weight: bold;
+	text-transform: uppercase;
+	&.relative {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	&.badge-small {
+		font-size: 9px;
+		padding: 2px 7px;
+	}
+}

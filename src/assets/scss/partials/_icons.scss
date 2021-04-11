@@ -1,0 +1,108 @@
+.material-icons {
+	font-display: block;
+
+	&.md-14 {
+		font-size: 14px;
+	}
+	&.md-18 {
+		font-size: 18px;
+	}
+
+	&.md-24 {
+		font-size: 24px;
+	}
+
+	&.md-36 {
+		font-size: 36px;
+	}
+
+	&.md-48 {
+		font-size: 48px;
+	}
+
+	&.md-68 {
+		font-size: 68px;
+	}
+
+	&.md-240 {
+		font-size: 240px;
+	}
+
+	/* Rules for using icons as black on a light background. */
+	&.md-dark {
+		color: rgba(0, 0, 0, 0.54);
+
+		&.md-inactive {
+			color: rgba(0, 0, 0, 0.26);
+		}
+	}
+
+	/* Rules for using icons as white on a dark background. */
+	&.md-light {
+		color: rgba(255, 255, 255, 1);
+
+		&.md-inactive {
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	// Extra Small
+	&.md-xs {
+		position: relative;
+		top: 3px;
+		font-size: 15px;
+		vertical-align: top;
+	}
+
+	// Small
+	&.md-sm {
+		position: relative;
+		top: 2px;
+		font-size: 20px;
+		vertical-align: top;
+	}
+
+	&.md-1 {
+		font-size: 1em;
+	}
+}
+
+.action-profile-icon {
+	font-size: 1.5em;
+    border: 1px solid #b1b1b1;
+    padding: 5px;
+	color: #b1b1b1;
+	&.active,
+	&:focus,
+	&:hover {
+		color: #CF0403;
+		border-color: #CF0403;
+	}
+}
+
+.icon {
+    fill: currentColor;
+    stroke: none;
+}
+.icon {
+    display: inline-block;
+    color: #111111;
+    height: 1em;
+    width: 1em;
+}
+.icon-shape {
+    width: 48px;
+    height: 48px;
+    background-position: 50%;
+    border-radius: .75rem;
+
+	i {
+		top: 14px;
+		position: relative;
+	}
+}
+
+.icon-xxs {
+    width: 20px;
+    height: 20px;
+}
