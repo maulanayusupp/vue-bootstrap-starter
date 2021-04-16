@@ -4,7 +4,7 @@
 		:hide-footer="true"
 		@close="close()">
 		<template slot="header">
-			<h3 class="text-white">{{ $t('Change Password') }}</h3>
+			<h3>{{ $t('Change Password') }}</h3>
 		</template>
 		<template slot="body">
 			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto" class="pr-3">

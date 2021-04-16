@@ -12,7 +12,7 @@
 				<div class="col-md-6 mb-2">
 					<div class="d-flex justify-content-start">
 						<div>
-							<button class="btn btn-primary text-white mr-2" @click="addItem">{{ $t('Add User') }}</button>
+							<button class="btn btn-primary mr-2" @click="addItem">{{ $t('Add User') }}</button>
 						</div>
 
 						<!-- More -->
@@ -34,10 +34,9 @@
 							<md-menu md-align-trigger :md-offset-x="0">
 								<button class="btn btn-info" md-menu-trigger>
 									<i class="material-icons text-white">person</i>
-									<span class="capitalize text-white" v-if="roleFilter === ''">{{$t('All')}}</span>
-									<span class="capitalize text-white" v-if="roleFilter === 'super_admin'">{{$t('Admin')}}</span>
-									<span class="capitalize pr-3 pl-3 text-white" v-if="roleFilter === 'collaborator'">{{$t('Collaborator')}}</span>
-									<span class="capitalize text-white" v-if="roleFilter === 'client'">{{$t('Client')}}</span>
+									<span class="capitalize" v-if="roleFilter === ''">{{$t('All')}}</span>
+									<span class="capitalize" v-if="roleFilter === 'super_admin'">{{$t('Admin')}}</span>
+									<span class="capitalize" v-if="roleFilter === 'client'">{{$t('Client')}}</span>
 								</button>
 								<md-menu-content>
 									<md-menu-item @click="roleFilter = ''"><span class="minw-87">{{$t('All')}}</span></md-menu-item>
@@ -187,7 +186,7 @@
 				@close="isConfirmRemoveVisible = false"
 				v-if="isConfirmRemoveVisible && selected">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove User') }}</h3>
+					<h3>{{ $t('Remove User') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ selected.name }}?
@@ -208,7 +207,7 @@
 				@close="isConfirmBannedVisible = false"
 				v-if="isConfirmBannedVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Banned User') }}</h3>
+					<h3>{{ $t('Banned User') }}</h3>
 				</template>
 				<template slot="body">
 					<span v-if="selected.is_banned === 0">{{ $t('Are you sure want to Banned') }} {{ selected.profile.name }}?</span>
@@ -233,7 +232,7 @@
 				@close="isConfirmVerifiedVisible = false"
 				v-if="isConfirmVerifiedVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Verifying User') }}</h3>
+					<h3>{{ $t('Verifying User') }}</h3>
 				</template>
 				<template slot="body">
 					<span v-if="selected.is_verified === 0">{{ $t('Are you sure want to Verified') }} {{ selected.profile.name }}?</span>
@@ -258,7 +257,7 @@
 				@close="isImportUserVisible = false"
 				v-if="isImportUserVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Import User') }}</h3>
+					<h3>{{ $t('Import User') }}</h3>
 				</template>
 				<template slot="body">
 				<div class="modal-import-box">
@@ -297,7 +296,7 @@
 				v-if="isExportUserVisible"
 				:hide-footer="true">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Export User') }}</h3>
+					<h3>{{ $t('Export User') }}</h3>
 				</template>
 				<template slot="body">
 				<div>
@@ -332,7 +331,7 @@
 				@close="isConfirmApprovalVisible = false"
 				v-if="isConfirmApprovalVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Approval') }}</h3>
+					<h3>{{ $t('Approval') }}</h3>
 				</template>
 				<template slot="body">
 					<span>

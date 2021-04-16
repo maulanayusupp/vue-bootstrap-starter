@@ -62,15 +62,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-list {
-	margin-bottom: 1em;
-	.card-list-item {
-		padding: 1em 2em;
-		border: 1px solid #dfdfdf;
-		border-bottom: 0;
-		&:last-child {
-			border-bottom: 1px solid #dfdfdf;
-		}
-	}
-}
 </style>

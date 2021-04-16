@@ -12,7 +12,7 @@
 				<div class="col-md-6 mb-2">
 					<div class="d-flex justify-content-start">
 						<div>
-							<button class="btn btn-primary text-white mr-2" @click="addItem">{{ $t('Add Article') }}</button>
+							<button class="btn btn-primary mr-2" @click="addItem">{{ $t('Add Article') }}</button>
 						</div>
 
 						<!-- More -->
@@ -32,11 +32,9 @@
 						<!-- counting -->
 						<div class="mr-3 ml-a d-flex">
 							<!-- Bulk delete -->
-							<div @click="isConfirmRemoveBulkVisible = true" :class="{'disabled': selectedBulk.length <= 0}">
-								<button :class="{'disabled': selectedBulk.length <= 0}" class="btn btn-danger ml-a mr-3 mb-0 mw-fc">
-									<div class="text-white">
-										<div>{{ $t('Delete Selected') }}</div>
-									</div>
+							<div>
+								<button :class="{'disabled': selectedBulk.length <= 0}" class="btn btn-danger ml-a mr-3 mb-0 mw-fc" @click="isConfirmRemoveBulkVisible = true">
+									<div>{{ $t('Delete Selected') }}</div>
 								</button>
 							</div>
 							<md-menu md-align-trigger md :md-offset-x=2>
@@ -141,7 +139,7 @@
 				@close="isConfirmRemoveVisible = false"
 				v-if="isConfirmRemoveVisible && selected">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove Article') }}</h3>
+					<h3>{{ $t('Remove Article') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ selected.name }}?
@@ -163,7 +161,7 @@
 				@close="isConfirmRemoveBulkVisible = false"
 				v-if="isConfirmRemoveBulkVisible && selectedBulk">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove Article') }}</h3>
+					<h3>{{ $t('Remove Article') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ selectedBulk.length }} {{ $t('item')}}?
@@ -190,7 +188,7 @@
 				@close="isConfirmPublishVisible = false"
 				v-if="isConfirmPublishVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Publish Article') }}</h3>
+					<h3>{{ $t('Publish Article') }}</h3>
 				</template>
 				<template slot="body">
 					<span v-if="selected.is_published === 0">{{ $t('Are you sure want to Publish') }} {{ selected.title }}?</span>
@@ -216,7 +214,7 @@
 				@close="isImportArticleVisible = false"
 				v-if="isImportArticleVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Import Article') }}</h3>
+					<h3>{{ $t('Import Article') }}</h3>
 				</template>
 				<template slot="body">
 				<div class="modal-import-box">
@@ -256,7 +254,7 @@
 				v-if="isExportArticleVisible"
 				:hide-footer="true">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Export Article') }}</h3>
+					<h3>{{ $t('Export Article') }}</h3>
 				</template>
 				<template slot="body">
 				<div>

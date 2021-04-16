@@ -4,8 +4,8 @@
 		:hide-footer="true"
 		@close="close">
 		<template slot="header">
-			<h3 class="text-white" v-if="!data">{{ $t('Add User') }}</h3>
-			<h3 class="text-white" v-else>{{ $t('Edit User') }}</h3>
+			<h3 v-if="!data">{{ $t('Add User') }}</h3>
+			<h3 v-else>{{ $t('Edit User') }}</h3>
 		</template>
 		<template slot="body">
 			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto" class="pr-3">
@@ -173,7 +173,7 @@
 					@click="save"
 					:disabled="!isValid"
 					type="submit"
-					class="btn btn-submit btn-danger mt-3"
+					class="btn btn-submit btn-primary mt-3"
 					:class="{ 'is-loading': isSaving }">
 					{{ $t('Create User') }}
 				</button>
@@ -181,7 +181,7 @@
 					@click="save"
 					:disabled="!isValid"
 					type="submit"
-					class="btn btn-submit btn-danger mt-3"
+					class="btn btn-submit btn-primary mt-3"
 					:class="{ 'is-loading': isSaving }">
 					{{ $t('Update User') }}
 			</button>

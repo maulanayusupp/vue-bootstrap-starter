@@ -4,9 +4,9 @@
 		:hide-footer="true"
 		@close="close">
 		<template slot="header">
-			<h3 class="text-white" v-if="!data">{{ $t('Add Category') }}</h3>
-			<h3 class="text-white" v-else-if="data && !status">{{ $t('Edit Category') }}</h3>
-			<h3 class="text-white" v-else-if="status">{{ $t('Add Sub Category') }}</h3>
+			<h3 v-if="!data">{{ $t('Add Category') }}</h3>
+			<h3 v-else-if="data && !status">{{ $t('Edit Category') }}</h3>
+			<h3 v-else-if="status">{{ $t('Add Sub Category') }}</h3>
 		</template>
 		<template slot="body">
 			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto">

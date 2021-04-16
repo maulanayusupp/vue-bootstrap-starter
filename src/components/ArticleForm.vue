@@ -4,8 +4,8 @@
 		:hide-footer="true"
 		@close="close">
 		<template slot="header">
-			<h3 class="text-white" v-if="!data">{{ $t('Add Article') }}</h3>
-			<h3 class="text-white" v-else>{{ $t('Edit Article') }}</h3>
+			<h3 v-if="!data">{{ $t('Add Article') }}</h3>
+			<h3 v-else>{{ $t('Edit Article') }}</h3>
 		</template>
 		<template slot="body">
 			<form @submit.prevent="save" class="pr-2">

@@ -13,7 +13,7 @@
 					<div class="d-flex justify-content-start">
 						<div>
 							<button
-								class="btn btn-primary text-white mr-2"
+								class="btn btn-primary mr-2"
 								@click="addItem">
 								{{ $t('Add Category') }}
 							</button>
@@ -37,9 +37,7 @@
 						<div class="mr-3">
 							<div @click="isConfirmRemoveBulkVisible = true" :class="{'disabled': selectedBulk.length <= 0}">
 								<button :class="{'disabled': selectedBulk.length <= 0}" class="btn btn-danger ml-a mr-3 mb-0 mw-fc">
-									<div class="text-white">
-										<div>{{ $t('Delete Selected') }}</div>
-									</div>
+									<div>{{ $t('Delete Selected') }}</div>
 								</button>
 							</div>
 						</div>
@@ -173,7 +171,7 @@
 				@close="isConfirmRemoveVisible = false"
 				v-if="isConfirmRemoveVisible && selected">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove Category') }}</h3>
+					<h3>{{ $t('Remove Category') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ selected.name }}?
@@ -199,7 +197,7 @@
 				@close="isConfirmRemoveVisibleSub = false"
 				v-if="isConfirmRemoveVisibleSub && dataSub">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove Category') }}</h3>
+					<h3>{{ $t('Remove Category') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ dataSub.name }}?
@@ -225,7 +223,7 @@
 				@close="isConfirmRemoveBulkVisible = false"
 				v-if="isConfirmRemoveBulkVisible && selectedBulk">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Remove Category') }}</h3>
+					<h3>{{ $t('Remove Category') }}</h3>
 				</template>
 				<template slot="body">
 					{{ $t('Are you sure want to delete') }} {{ selectedBulk.length }} {{ $t('item')}}?
@@ -251,7 +249,7 @@
 				@close="isImportCategoryVisible = false"
 				v-if="isImportCategoryVisible">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Import Category') }}</h3>
+					<h3>{{ $t('Import Category') }}</h3>
 				</template>
 				<template slot="body">
 				<div class="modal-import-box">
@@ -300,7 +298,7 @@
 				v-if="isExportCategoryVisible"
 				:hide-footer="true">
 				<template slot="header">
-					<h3 class="text-white">{{ $t('Export Category') }}</h3>
+					<h3>{{ $t('Export Category') }}</h3>
 				</template>
 				<template slot="body">
 				<div>

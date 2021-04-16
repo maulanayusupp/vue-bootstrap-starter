@@ -4,7 +4,7 @@
 		:hide-footer="true"
 		@close="close">
 		<template slot="header">
-			<h3 class="text-white">{{ $t('Details Article') }}</h3>
+			<h3>{{ $t('Details Article') }}</h3>
 		</template>
 		<template slot="body">
 				<!-- Title -->
