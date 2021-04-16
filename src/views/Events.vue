@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="d-flex justify-content-between">
 			<div class="mb-4">
-				<h2 class="font-weight-bold">{{ $t('Events') }}</h2>
+				<h2>{{ $t('Events') }}</h2>
 				<div>{{ $t('Manage all events') }}</div>
 			</div>
 		</div>
@@ -15,7 +15,7 @@
 				<div class="card mb-4 card-add card-table pointer">
 					<div class="card-table-middle text-center">
 						<div class="text-muted">
-							<i class="material-icons">add</i>
+							<i class="material-icons font-weight-bold">add</i>
 							<div class="font-weight-bold text-lg">{{ $t('Add new event') }}</div>
 						</div>
 					</div>
