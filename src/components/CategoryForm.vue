@@ -9,7 +9,7 @@
 			<h3 v-else-if="status">{{ $t('Add Sub Category') }}</h3>
 		</template>
 		<template slot="body">
-			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto">
+			<form @submit.prevent="save">
 				<!-- Name -->
 				<div class="form-group">
 					<label>{{ $t('Name') }}</label>
@@ -46,32 +46,35 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Actions -->
+				<div>
+					<button v-if="!data"
+						@click="save"
+						type="submit"
+						class="btn btn-submit btn-primary mt-3"
+						:disabled="isFormValid"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Create Category') }}
+					</button>
+					<button v-else-if="data && !status"
+						@click="save"
+						type="submit"
+						:disabled="isFormValid"
+						class="btn btn-submit btn-primary mt-3"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Update Category') }}
+					</button>
+					<button v-else-if="status"
+						@click="save"
+						type="submit"
+						:disabled="isFormValid"
+						class="btn btn-submit btn-primary mt-3"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Create Sub Category') }}
+					</button>
+				</div>
 			</form>
-			<!-- Submit -->
-			<button v-if="!data"
-				@click="save"
-				type="submit"
-				class="btn btn-submit btn-primary mt-3"
-				:disabled="isFormValid"
-				:class="{ 'is-loading': isSaving }">
-				{{ $t('Create Category') }}
-			</button>
-			<button v-else-if="data && !status"
-				@click="save"
-				type="submit"
-				:disabled="isFormValid"
-				class="btn btn-submit btn-primary mt-3"
-				:class="{ 'is-loading': isSaving }">
-				{{ $t('Update Category') }}
-			</button>
-			<button v-else-if="status"
-				@click="save"
-				type="submit"
-				:disabled="isFormValid"
-				class="btn btn-submit btn-primary mt-3"
-				:class="{ 'is-loading': isSaving }">
-				{{ $t('Create Sub Category') }}
-			</button>
 		</template>
 	</modal>
 </template>

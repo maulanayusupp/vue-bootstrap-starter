@@ -7,7 +7,7 @@
 			<h3>{{ $t('Change Password') }}</h3>
 		</template>
 		<template slot="body">
-			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto" class="pr-3">
+			<form @submit.prevent="save" class="pr-3">
 				<!-- old Password -->
 				<div class="form-group">
 					<label>{{ $t('Old Password') }}</label>
@@ -23,16 +23,19 @@
 					<label>{{ $t('Confirm Password') }}</label>
 					<input-password v-model="confirmPassword" :required="true" :notMatch="confirmPassword !== newPassword" />
 				</div>
+
+				<!-- Actions -->
+				<div>
+					<button
+						@click="save"
+						:disabled="!isFormValid"
+						type="submit"
+						class="btn btn-submit btn-danger mt-3"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Update Password') }}
+					</button>
+				</div>
 			</form>
-			<!-- Submit -->
-			<button
-				@click="save"
-				:disabled="!isFormValid"
-				type="submit"
-				class="btn btn-submit btn-danger mt-3"
-				:class="{ 'is-loading': isSaving }">
-				{{ $t('Update Password') }}
-			</button>
 		</template>
 	</modal>
 </template>

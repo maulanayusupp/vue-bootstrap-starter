@@ -8,7 +8,7 @@
 			<h3 v-else>{{ $t('Edit User') }}</h3>
 		</template>
 		<template slot="body">
-			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto" class="pr-3">
+			<form @submit.prevent="save" class="pr-3">
 				<div class="row">
 					<div class="col-md-6">
 						<!-- Role -->
@@ -167,24 +167,27 @@
 						<span class="custom-control-label pt-1">{{ $t('Banned') }}</span>
 					</label>
 				</div>
+
+				<!-- Actions -->
+				<div>
+					<button v-if="!data"
+						@click="save"
+						:disabled="!isValid"
+						type="submit"
+						class="btn btn-submit btn-primary mt-3"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Create User') }}
+					</button>
+					<button v-else
+						@click="save"
+						:disabled="!isValid"
+						type="submit"
+						class="btn btn-submit btn-primary mt-3"
+						:class="{ 'is-loading': isSaving }">
+						{{ $t('Update User') }}
+					</button>
+				</div>
 			</form>
-			<!-- Submit -->
-			<button v-if="!data"
-					@click="save"
-					:disabled="!isValid"
-					type="submit"
-					class="btn btn-submit btn-primary mt-3"
-					:class="{ 'is-loading': isSaving }">
-					{{ $t('Create User') }}
-				</button>
-				<button v-else
-					@click="save"
-					:disabled="!isValid"
-					type="submit"
-					class="btn btn-submit btn-primary mt-3"
-					:class="{ 'is-loading': isSaving }">
-					{{ $t('Update User') }}
-			</button>
 		</template>
 	</modal>
 </template>

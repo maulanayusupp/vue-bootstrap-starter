@@ -41,7 +41,7 @@
 						></chrome-picker>
 						<button
 							@click="closeColorPicker"
-							class="btn-primary btn-close-picker"
+							class="btn btn-primary btn-close-picker btn-block"
 						>{{ $t('Close') }}</button>
 					</div>
 			</template>

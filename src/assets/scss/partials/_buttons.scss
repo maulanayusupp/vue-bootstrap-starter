@@ -237,6 +237,12 @@
 
 .btn-close-picker {
 	min-width: 225px;
+	border-radius: 0 !important;
+	&:hover,
+	&:active,
+	&:focus {
+		transform: scale(1) !important;
+	}
 }
 
 .btn-outline {

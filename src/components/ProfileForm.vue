@@ -7,7 +7,7 @@
 			<h3>{{ $t('Edit Profile') }}</h3>
 		</template>
 		<template slot="body">
-			<form @submit.prevent="save" style="max-height: 550px; overflow-y: auto" class="pr-3">
+			<form @submit.prevent="save" class="pr-3">
 				<!-- Role -->
 				<!-- <div class="form-group roles">
 					<label class="typo__label">Roles</label>
