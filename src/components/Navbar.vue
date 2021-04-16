@@ -16,6 +16,11 @@
 								<div class="text-center">{{ $t('Home') }}</div>
 							</router-link>
 						</li>
+						<li class="nav-item">
+							<router-link to="/events" class="nav-link">
+								<div class="text-center">{{ $t('Events') }}</div>
+							</router-link>
+						</li>
 					</template>
 					<template v-if="isSuperAdmin">
 						<li class="nav-item">

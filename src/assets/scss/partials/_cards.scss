@@ -165,3 +165,35 @@
 		font-size: 0.75rem;
 	}
 }
+
+.card-event {
+	min-height: 250px;
+	max-height: 250px;
+	.card-event-thumbnail {
+		min-width: 65px;
+		max-height: 65px;
+		min-height: 65px;
+		background-color: lightgrey;
+		background-position: center top;
+		background-size: cover;
+		border-radius: 5px;
+	}
+	.card-event-description {
+		min-height: 85px;
+		max-height: 85px;
+	}
+}
+
+.card-add {
+	min-height: 250px;
+	max-height: 250px;
+}
+
+.card-table {
+	width: 100%;
+	display: table;
+	.card-table-middle {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

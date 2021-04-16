@@ -240,10 +240,12 @@
 .minw-150 {
 	min-width: 150px;
 }
+.minw-130 {
+	min-width: 130px;
+}
 .minw-100 {
 	min-width: 100px;
 }
-
 .minw-70 {
 	min-width: 70px;
 }
@@ -439,6 +441,7 @@
 	color: white;
 }
 
+.text-ellipsis,
 .ellipsis-text {
 	white-space: nowrap;
 	overflow: hidden;

@@ -114,6 +114,15 @@ export default new Router({
 			},
 		},
 		{
+			path: '/events',
+			name: 'Events',
+			component: loadView('Events'),
+			meta: {
+				title: `Events - ${APP_NAME}`,
+				gtm: 'Events',
+			},
+		},
+		{
 			path: '/profiles',
 			name: 'Profile',
 			component: loadView('Profile'),
