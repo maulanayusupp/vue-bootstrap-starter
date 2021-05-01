@@ -31,7 +31,7 @@
 								</div>
 								<div class="text-center mt-3">
 									<!-- Upload File -->
-									<label class="btn btn-primary btn-lg" :class="{ 'is-loading white': isUploading }">
+									<label class="btn btn-secondary btn-lg align-middle" :class="{ 'is-loading white': isUploading }">
 										Choose Photo
 										<input type="file" class="hidden" accept="image/*" @change="onFileSelected" hidden>
 									</label>
@@ -47,7 +47,7 @@
 
 							<!-- Continue -->
 							<div class="continue-step mt-3 mb-2">
-								<button type="button" class="btn btn-lg btn-danger" :class="{ 'is-loading': isSaving }" @click="continueAndSave()">Save</button>
+								<button type="button" class="btn btn-lg btn-primary" :class="{ 'is-loading': isSaving }" @click="continueAndSave()">Save</button>
 							</div>
 						</div>
 					</div>

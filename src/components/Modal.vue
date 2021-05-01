@@ -8,10 +8,10 @@
 							<slot name="header">
 								Modal Header
 							</slot>
-							<div class="modal-close" @click="$emit('close')">
+							<div class="modal-close" @click="$emit('close')" v-if="isCloseable">
 								<i class="material-icons">close</i>
 							</div>
-							<button type="button" class="close hidden" aria-label="Close" @click="$emit('close')">
+							<button type="button" class="close hidden" aria-label="Close" @click="$emit('close')" v-if="isCloseable">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
@@ -54,6 +54,10 @@ export default {
 			type: Boolean,
 			default: false,
 		},
+		isCloseable: {
+			type: Boolean,
+			default: true,
+		},
 	},
 	methods: {
 		onKeyup(event) {
@@ -61,14 +65,20 @@ export default {
 				this.$emit('close');
 			}
 		},
+		initKeyUp() {
+			document.body.classList.add('modal-open');
+			window.addEventListener('keyup', this.onKeyup);
+		},
+		destroyKeyUp() {
+			document.body.classList.remove('modal-open');
+			window.removeEventListener('keyup', this.onKeyup);
+		},
 	},
 	created() {
-		document.body.classList.add('modal-open');
-		window.addEventListener('keyup', this.onKeyup);
+		if (this.isCloseable) this.initKeyUp();
 	},
 	destroyed() {
-		document.body.classList.remove('modal-open');
-		window.removeEventListener('keyup', this.onKeyup);
+		if (this.isCloseable) this.destroyKeyUp();
 	},
 };
 </script>

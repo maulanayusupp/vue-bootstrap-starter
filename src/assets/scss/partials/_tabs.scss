@@ -1,0 +1,9 @@
+.filter-options {
+	.filter-option-item {
+		border-bottom: 1px solid #d1d1d1;
+		&.active {
+			font-weight: bold;
+			border-left: 5px solid #9F1FB5;
+		}
+	}
+}

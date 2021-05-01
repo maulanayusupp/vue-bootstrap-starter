@@ -82,7 +82,7 @@ import {
 } from '@/lib/static';
 
 import ChangePasswordForm from '@/components/ChangePasswordForm.vue';
-import ModalEditProfile from '@/components/ModalEditProfile.vue';
+import ModalEditProfile from '@/components/modals/ModalEditProfile.vue';
 
 export default {
 	name: 'ProfileDetails',

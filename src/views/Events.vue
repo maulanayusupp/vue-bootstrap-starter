@@ -1,10 +1,13 @@
 <template>
 <div class="page page-events">
 	<div class="container">
-		<div class="d-flex justify-content-between">
-			<div class="mb-4">
+		<div class="d-flex justify-content-between mb-4">
+			<div>
 				<h2>{{ $t('Events') }}</h2>
 				<div>{{ $t('Manage all events') }}</div>
+			</div>
+			<div>
+				<button type="button" class="btn btn-lg btn-primary" @click="showCreator()"><i class="material-icons mr-2">add</i> Add New</button>
 			</div>
 		</div>
 
@@ -12,7 +15,7 @@
 		<div class="row">
 			<!-- Create -->
 			<div class="col-lg-4 col-md-6 col-sm-12">
-				<div class="card mb-4 card-add card-table pointer">
+				<div class="card mb-4 card-add card-table pointer" @click="showCreator()">
 					<div class="card-table-middle text-center">
 						<div class="text-muted">
 							<i class="material-icons font-weight-bold">add</i>
@@ -55,7 +58,7 @@
 							</div>
 							<div class="text-right">
 								<div class="font-weight-bold">24-10-2021</div>
-								<div class="text-muted">Due Date</div>
+								<div class="text-muted">Date</div>
 							</div>
 						</div>
 					</div>
@@ -63,13 +66,21 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal Event Creator -->
+	<modal-event-creator :show="isShowCreator" @close="closeCreator()" />
 </div>
 </template>
 
 <script>
+
+import ModalEventCreator from '@/components/modals/ModalEventCreator.vue';
+
 export default {
 	name: 'Events',
-	components: {},
+	components: {
+		ModalEventCreator,
+	},
 	data() {
 		return {
 			items: [
@@ -93,12 +104,25 @@ export default {
 					thumbnail: 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/cristal-laptop.jpg',
 					description: 'Events and Live Communication. Created in 2006 to foster and advance the importance of events in the marketing plans of large and smaller corporations, the Best Event Awards (formerly known as EuBea – European Best Event Awards) have helped participating agencies from 40 countries in finding inspiration and new ideas for their events, and are now acknowledged as the main and most challenging international industry recognition. As in previous years, shortlisted agencies contesting for the renowned golden elephant awards will have the opportunity to present their projects live to the Jury and Bea World Festival delegates.',
 				},
+				{
+					title: 'For Revenge',
+					thumbnail: 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/cristal-laptop.jpg',
+					description: 'Best Event Awards (formerly known as EuBea – European Best Event Awards) have helped participating agencies from 40 countries in finding inspiration and new ideas for their events, and are now acknowledged as the main and most challenging international industry recognition. As in previous years, shortlisted agencies contesting for the renowned golden elephant awards will have the opportunity to present their projects live to the Jury and Bea World Festival delegates.',
+				},
 			],
+			isShowCreator: false,
 		};
 	},
 	sockets: {},
 	computed: {},
-	methods: {},
+	methods: {
+		showCreator() {
+			this.isShowCreator = true;
+		},
+		closeCreator() {
+			this.isShowCreator = false;
+		},
+	},
 	watch: {},
 	mounted() {},
 	created() {},

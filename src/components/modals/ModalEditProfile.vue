@@ -83,13 +83,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.filter-options {
-	.filter-option-item {
-		border-bottom: 1px solid #d1d1d1;
-		&.active {
-			font-weight: bold;
-			border-left: 5px solid #CF0403;
-		}
-	}
-}
 </style>
